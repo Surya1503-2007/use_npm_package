@@ -1,0 +1,36 @@
+{
+  "name": "use-npm-package",
+  "version": "1.0.0",
+  "description": "Demo project showcasing the usage of @surya1503/repo-audit npm package — both CLI and programmatic API",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "audit": "repo-audit",
+    "audit:unused": "repo-audit --only unused",
+    "audit:size": "repo-audit --only size --top 5",
+    "audit:duplicates": "repo-audit --only duplicates",
+    "audit:json": "repo-audit --json > audit-report.json",
+    "audit:ci": "repo-audit --fail-on any",
+    "audit:threshold": "repo-audit --only size --threshold 5mb --fail-on size",
+    "demo": "node index.js",
+    "demo:individual": "node examples/individual-checks.js",
+    "demo:json-report": "node examples/json-report.js",
+    "demo:custom-config": "node examples/custom-config.js"
+  },
+  "keywords": [
+    "repo-audit",
+    "demo",
+    "dependency-audit",
+    "npm-package-usage"
+  ],
+  "author": "Surya",
+  "license": "MIT",
+  "dependencies": {
+    "@surya1503/repo-audit": "^1.0.0",
+    "express": "^4.21.0",
+    "lodash": "^4.17.21",
+    "axios": "^1.7.0",
+    "chalk": "^5.3.0",
+    "moment": "^2.30.1"
+  }
+}
